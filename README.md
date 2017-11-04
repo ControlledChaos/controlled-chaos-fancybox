@@ -1,6 +1,8 @@
 # Controlled-Chaos-Fancybox
 A WordPress plugin to add Fancybox 3 functionality to images and galleries.
 
+Fancybox documentaion at: http://fancyapps.com/fancybox/3/docs/
+
 ## Default Behavior
 The plugin sets the add image "Link to" field as "File" by default.
 
