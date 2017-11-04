@@ -3,19 +3,19 @@
 /**
  * Controlled Chaos Fancybox.
  *
- * @link              http://example.com
+ * @link              https://github.com/ControlledChaos/Controlled-Chaos-Fancybox
  * @since             1.0.0
  * @package           CCD_Fancybox
  *
  * @wordpress-plugin
  * Plugin Name:       Controlled Chaos Fancybox
- * Plugin URI:        http://example.com/
+ * Plugin URI:        https://github.com/ControlledChaos/Controlled-Chaos-Fancybox
  * Description:       Adds Fancybox 3 functionality to images and galleries.
  * Version:           1.0.0
  * Author:            Controlled Chaos Design
- * Author URI:        http://example.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Author URI:        http://ccdzine.com/
+ * License:           GPL-3.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       ccd-fancybox
  * Domain Path:       /languages
  */
