@@ -9,3 +9,44 @@ Links to single image files added via the content editor are detected automatica
 
 ## Gallery Images
 Gallery images will will open in Fancybox with the other images in the gallery. Galleries are segregated by ID for use with multiple galleries per post.
+
+## Gallery Options
+There is no user interface with this plugin, however there are several options available by editing the WordPress gallery shortcode created in the post.
+
+Following is a list of available shortcode parameters:
+
+### Loop Images
+Enable infinite gallery navigation. False by default.
+* loop="false"
+* loop="true"
+
+### Infobar
+Display counter and navigation arrows at the top. False by default.
+* infobar="false"
+* infobar="true"
+
+### Toolbar
+Display toolbar buttons at the top. True by default.
+* toolbar="true"
+* toolbar="false"
+
+### Arrows
+Display navigation arrows at the screen edges. True by default.
+* arrows="true"
+* arrows="false"
+
+### Thumbnail Images
+Display thumbnails on opening. False by default.
+* thumbs="true"
+* thumbs="false"
+
+### Captions
+Display image caption field, image title field, or hide captions. Title by default.
+* captions="title"
+* captions="captions"
+* captions="hide"
+
+### Protect Images
+Discourge downloading by disabling right click. False by default.
+* protected="false"
+* protected="true"
