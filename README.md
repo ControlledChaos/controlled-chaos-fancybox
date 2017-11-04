@@ -15,6 +15,9 @@ Gallery images will will open in Fancybox with the other images in the gallery. 
 ## Gallery Options
 There is no user interface with this plugin, however there are several options available by editing the WordPress gallery shortcode created in the post.
 
+<strong>Example:</strong><br />
+`[gallery size="medium" columns="3" ids="12,14,22,35,11,32" link="file" captions="captions" infobar="true" arrows="false"]`
+
 Following is a list of available shortcode parameters:
 
 ### Loop Images
