@@ -3,14 +3,14 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       https://github.com/ControlledChaos/controlled-chaos-fancybox
  * @since      1.0.0
  *
  * @package    CCD_Fancybox
  * @subpackage CCD_Fancybox/public
  */
 
-namespace CCD_Fancybox;
+namespace CCD_Fancybox\Plugin_Public;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -27,34 +27,17 @@ if ( ! defined( 'WPINC' ) ) {
 class CCD_Fancybox_Public {
 
 	/**
-	 * CCD Fancybox ID.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $ccd_fancybox
-	 */
-	private $ccd_fancybox;
-
-	/**
-	 * CCD Fancybox version.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version
-	 */
-	private $version;
-
-	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $ccd_fancybox
-	 * @param      string    $version
 	 */
-	public function __construct( $ccd_fancybox, $version ) {
+	public function __construct() {
 
-		$this->ccd_fancybox = $ccd_fancybox;
-		$this->version = $version;
+		// Enqueue styles.
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_styles' ] );
+
+		// Enqueue scripts.
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 
 		// Add Fancybox data attributes to image links in the content.
 		add_filter( 'the_content', [ $this, 'fancybox_single_images' ], 2 );
@@ -68,11 +51,8 @@ class CCD_Fancybox_Public {
 	 */
 	public function enqueue_styles() {
 
-		// Non-vendor plugin styles.
-		// wp_enqueue_style( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/css/ccd-fancybox-public.css', array(), $this->version, 'all' );
-
 		// Fancybox 3.
-		wp_enqueue_style( $this->ccd_fancybox . '-fancybox', plugin_dir_url( __FILE__ ) . 'assets/css/jquery.fancybox.min.css', [], $this->version, 'all' );
+		wp_enqueue_style( 'ccd-fancybox', plugin_dir_url( __FILE__ ) . 'assets/css/jquery.fancybox.min.css', [], CCD_FANCYBOX_VERSION, 'all' );
 
 	}
 
@@ -83,16 +63,15 @@ class CCD_Fancybox_Public {
 	 */
 	public function enqueue_scripts() {
 
-		// Non-vendor plugin script. Retained for possible furture development.
-		// wp_enqueue_script( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/js/ccd-fancybox-public.js', array( 'jquery' ), $this->version, false );
-
 		// Fancybox 3.
-		wp_enqueue_script( $this->ccd_fancybox . '-fancybox', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.fancybox.min.js', [ 'jquery' ], $this->version, true );
+		wp_enqueue_script( 'ccd-fancybox', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.fancybox.min.js', [ 'jquery' ], CCD_FANCYBOX_VERSION, true );
 
 	}
 
 	/**
 	 * Add Fancybox data attributes to image links in the content.
+	 * 
+	 * @since    1.0.0
 	 */
 	public function fancybox_single_images( $content ) {
 
@@ -119,3 +98,6 @@ class CCD_Fancybox_Public {
 	}
 
 }
+
+// Run the public class.
+$ccd_fancybox_public = new CCD_Fancybox_Public();

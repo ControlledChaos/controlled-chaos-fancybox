@@ -20,8 +20,6 @@
  * Domain Path:       /languages
  */
 
-namespace CCD_Fancybox;
-
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -35,14 +33,15 @@ define( 'CCD_FANCYBOX_VERSION', '1.0.0' );
 require plugin_dir_path( __FILE__ ) . 'includes/class-ccd-fancybox.php';
 
 /**
- * Begins execution of the plugin.
- *
- * @since    1.0.0
+ * Add settings links to the admin page.
  */
-function run_ccd_fancybox() {
+function ccd_fancybox_settings_link( $links ) {
 
-	$plugin = new CCD_Fancybox();
-	$plugin->run();
+	$settings_link = [
+		sprintf( '<a href="%1s" class="ccd-fancybox-settings-link">%2s</a>', admin_url( 'options-media.php' ), esc_attr( 'Settings', 'ccd-fancybox' ) ),
+	];
+
+	return array_merge( $links, $settings_link );
 
 }
-run_ccd_fancybox();
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'ccd_fancybox_settings_link' );

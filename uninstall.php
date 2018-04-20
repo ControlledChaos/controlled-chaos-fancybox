@@ -3,7 +3,7 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @link       http://example.com
+ * @link       https://github.com/ControlledChaos/controlled-chaos-fancybox
  * @since      1.0.0
  *
  * @package    CCD_Fancybox

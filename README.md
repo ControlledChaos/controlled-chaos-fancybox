@@ -5,7 +5,7 @@ A WordPress plugin to add Fancybox 3 functionality to images and galleries.
 Fancybox documentaion at: http://fancyapps.com/fancybox/3/docs/
 
 ## Default Behavior
-The plugin sets the add image "Link to" field as "File" by default.
+The plugin sets the WordPress add image "Link to" field as "File" by default. This can still be changed in the dropdown box when adding or editing single images and galleries.
 
 ## Single Images
 Links to single image files added via the content editor are detected automatically and open in Fancybox individually. Images linked to content or external sites will follow the link as expected.

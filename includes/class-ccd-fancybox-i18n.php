@@ -3,7 +3,7 @@
 /**
  * Define the internationalization functionality.
  *
- * @link       http://example.com
+ * @link       https://github.com/ControlledChaos/controlled-chaos-fancybox
  * @since      1.0.0
  *
  * @package    CCD_Fancybox
@@ -46,3 +46,5 @@ class CCD_Fancybox_i18n {
 
 
 }
+
+$ccd_fancybox_translate = new CCD_Fancybox_i18n();

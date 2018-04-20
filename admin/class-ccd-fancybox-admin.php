@@ -3,14 +3,14 @@
 /**
  * Backend functions.
  *
- * @link       http://example.com
+ * @link       https://github.com/ControlledChaos/controlled-chaos-fancybox
  * @since      1.0.0
  *
  * @package    CCD_Fancybox
  * @subpackage CCD_Fancybox/admin
  */
 
-namespace CCD_Fancybox;
+namespace CCD_Fancybox\Plugin_Admin;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -27,37 +27,14 @@ if ( ! defined( 'WPINC' ) ) {
 class CCD_Fancybox_Admin {
 
 	/**
-	 * CCD Fancybox ID.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $ccd_fancybox
-	 */
-	private $ccd_fancybox;
-
-	/**
-	 * CCD Fancybox version.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version
-	 */
-	private $version;
-
-	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $ccd_fancybox
-	 * @param      string    $version
 	 */
-	public function __construct( $ccd_fancybox, $version ) {
+	public function __construct() {
 
-		$this->ccd_fancybox = $ccd_fancybox;
-		$this->version = $version;
-
-		// Require backend function files.
-		$this->require_files();
+		// Load dependencies.
+		$this->dependencies();
 
 	}
 
@@ -66,7 +43,7 @@ class CCD_Fancybox_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function require_files() {
+	public function dependencies() {
 
 		// Backend image functions.
 		require plugin_dir_path( __FILE__ ) . 'class-ccd-fancybox-images.php';
@@ -76,28 +53,7 @@ class CCD_Fancybox_Admin {
 
 	}
 
-	/**
-	 * Register the stylesheets for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
-
-		// Non-vendor plugin styles. Retained for possible furture development.
-		// wp_enqueue_style( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/css/ccd-fancybox-admin.css', array(), $this->version, 'all' );
-
-	}
-
-	/**
-	 * Register the JavaScript for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
-		// Non-vendor plugin script. Retained for possible furture development.
-		// wp_enqueue_script( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/js/ccd-fancybox-admin.js', array( 'jquery' ), $this->version, false );
-
-	}
-
 }
+
+// Run the admin class.
+$ccd_fancybox_admin = new CCD_Fancybox_Admin();
