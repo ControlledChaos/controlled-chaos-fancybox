@@ -69,10 +69,10 @@ class CCD_Fancybox_Public {
 	public function enqueue_styles() {
 
 		// Non-vendor plugin styles.
-		wp_enqueue_style( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'css/ccd-fancybox-public.css', array(), $this->version, 'all' );
+		// wp_enqueue_style( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/css/ccd-fancybox-public.css', array(), $this->version, 'all' );
 
 		// Fancybox 3.
-		wp_enqueue_style( $this->ccd_fancybox . '-fancybox', plugin_dir_url( __FILE__ ) . 'css/jquery.fancybox.min.css', [], $this->version, 'all' );
+		wp_enqueue_style( $this->ccd_fancybox . '-fancybox', plugin_dir_url( __FILE__ ) . 'assets/css/jquery.fancybox.min.css', [], $this->version, 'all' );
 
 	}
 
@@ -84,10 +84,10 @@ class CCD_Fancybox_Public {
 	public function enqueue_scripts() {
 
 		// Non-vendor plugin script. Retained for possible furture development.
-		// wp_enqueue_script( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'js/ccd-fancybox-public.js', array( 'jquery' ), $this->version, false );
+		// wp_enqueue_script( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/js/ccd-fancybox-public.js', array( 'jquery' ), $this->version, false );
 
 		// Fancybox 3.
-		wp_enqueue_script( $this->ccd_fancybox . '-fancybox', plugin_dir_url( __FILE__ ) . 'js/jquery.fancybox.min.js', [ 'jquery' ], $this->version, true );
+		wp_enqueue_script( $this->ccd_fancybox . '-fancybox', plugin_dir_url( __FILE__ ) . 'assets/js/jquery.fancybox.min.js', [ 'jquery' ], $this->version, true );
 
 	}
 

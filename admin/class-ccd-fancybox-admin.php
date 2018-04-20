@@ -84,7 +84,7 @@ class CCD_Fancybox_Admin {
 	public function enqueue_styles() {
 
 		// Non-vendor plugin styles. Retained for possible furture development.
-		// wp_enqueue_style( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'css/ccd-fancybox-admin.css', array(), $this->version, 'all' );
+		// wp_enqueue_style( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/css/ccd-fancybox-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class CCD_Fancybox_Admin {
 	public function enqueue_scripts() {
 
 		// Non-vendor plugin script. Retained for possible furture development.
-		// wp_enqueue_script( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'js/ccd-fancybox-admin.js', array( 'jquery' ), $this->version, false );
+		// wp_enqueue_script( $this->ccd_fancybox, plugin_dir_url( __FILE__ ) . 'assets/js/ccd-fancybox-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
