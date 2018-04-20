@@ -11,7 +11,7 @@ The plugin sets the add image "Link to" field as "File" by default.
 Links to single image files added via the content editor are detected automatically and open in Fancybox individually. Images linked to content or external sites will follow the link as expected.
 
 ## Gallery Images
-Gallery images will will open in Fancybox with the other images in the gallery. Galleries are segregated by ID for use with multiple galleries per post.
+Gallery images will open in Fancybox with the other images in the gallery. Galleries are segregated by ID for use with multiple galleries per post.
 
 ## Gallery Options
 There is no user interface with this plugin, however there are several options available by editing the WordPress gallery shortcode created in the post.
